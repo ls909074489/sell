@@ -49,8 +49,8 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     private PayService payService;
 
-    @Autowired
-    private PushMessageService pushMessageService;
+//    @Autowired
+//    private PushMessageService pushMessageService;
 
     @Autowired
     private WebSocket webSocket;
@@ -112,7 +112,7 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public OrderDTO findOne(String orderId) {
 
-        OrderMaster orderMaster = orderMasterRepository.getOne(orderId);//findOne(orderId)
+        OrderMaster orderMaster = orderMasterRepository.findById(orderId).get();//findOne(orderId)
         if (orderMaster == null) {
             throw new SellException(ResultEnum.ORDER_NOT_EXIST);
         }
@@ -196,7 +196,7 @@ public class OrderServiceImpl implements OrderService {
         }
 
         //推送微信模版消息
-        pushMessageService.orderStatus(orderDTO);
+//        pushMessageService.orderStatus(orderDTO);
 
         return orderDTO;
     }
