@@ -22,8 +22,8 @@ import java.util.List;
 @Slf4j
 public class PushMessageServiceImpl implements PushMessageService {
 
-//    @Autowired
-//    private WxMpService wxMpService;
+    @Autowired
+    private WxMpService wxMpService;
 
     @Autowired
     private WechatAccountConfig accountConfig;
@@ -44,10 +44,10 @@ public class PushMessageServiceImpl implements PushMessageService {
                 new WxMpTemplateData("remark", "欢迎再次光临！")
         );
         templateMessage.setData(data);
-//        try {
-//            wxMpService.getTemplateMsgService().sendTemplateMsg(templateMessage);
-//        }catch (WxErrorException e) {
-//            log.error("【微信模版消息】发送失败, {}", e);
-//        }
+        try {
+            wxMpService.getTemplateMsgService().sendTemplateMsg(templateMessage);
+        }catch (WxErrorException e) {
+            log.error("【微信模版消息】发送失败, {}", e);
+        }
     }
 }
