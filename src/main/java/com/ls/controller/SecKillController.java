@@ -45,4 +45,18 @@ public class SecKillController {
         secKillService.orderProductMockDiffUser(productId);
         return secKillService.querySecKillProductInfo(productId);
     }
+    
+    
+    /**
+     * 查询
+     * @param productId
+     * @return
+     * @throws Exception
+     */
+    @GetMapping("/queryProduct/{productId}")
+    public String queryProduct(@PathVariable String productId)throws Exception
+    {
+        log.info("@queryProduct request, productId:" + productId);
+        return secKillService.querySecKillProductInfo(productId);
+    }
 }
