@@ -39,7 +39,7 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.16.2</version>
+			<!-- <version>1.16.2</version> -->
 		</dependency>
 
 		<dependency>
@@ -77,6 +77,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
+        <dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<!-- <version>2.9.0</version> -->
+		</dependency>
         
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -88,6 +93,33 @@
 			<artifactId>mybatis-spring-boot-starter</artifactId>
 			<version>1.2.0</version>
 		</dependency>
+		
+       <!--  <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <version>2.0.0.RELEASE</version>
+        </dependency>
+        
+        <dependency>
+		 <groupId>org.springframework.cloud</groupId>
+		  <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		  <version>2.0.0.RELEASE</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.springframework.cloud</groupId>
+		  <artifactId>spring-cloud-starter-config</artifactId>
+		   <version>2.0.0.RELEASE</version>
+		</dependency>
+		<dependency>
+		 <groupId>org.springframework.cloud</groupId>
+		  <artifactId>spring-cloud-starter-openfeign</artifactId>
+		  <version>2.0.0.RELEASE</version>
+		</dependency>
+		<dependency>
+		  <groupId>io.springfox</groupId>
+		      <artifactId>springfox-swagger2</artifactId>
+		  <version>2.8.0</version>
+		</dependency> -->
 	</dependencies>
 
 	<build>
